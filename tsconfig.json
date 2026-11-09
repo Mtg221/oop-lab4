@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "strict": true,
+    "moduleDetection": "force",
+    "noEmit": true
+  }
+}
