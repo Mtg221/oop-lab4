@@ -130,3 +130,10 @@ classDiagram
   1. `instanceof T` fails because `T` doesn't exist at runtime.
   2. `parseJson<BookData[]>` checks nothing. `JSON.parse` just returns whatever is in the string.
 - Data from outside (APIs, files, user input) must be checked **at runtime**, for example with Zod or your own check functions.
+
+## Part 6: Homework — The `Ratings<T extends HasId>` class
+
+### Q13
+
+- If `best()` returned `HasId` instead of `T`, the caller could only call `getId()`. They could no longer call methods specific to the item, like `top.describe()` on a `Book` or `top.getName()` on a `Member`. Returning `T` preserves the exact type.
+
